@@ -33,3 +33,9 @@ Route::get('r1', function() {
     return redirect('r2');
 });
 
+//修改 Route 接受參數
+Route::get('hello/{name}',function($name){
+    return'Hello,'.$name;
+});
+
+
