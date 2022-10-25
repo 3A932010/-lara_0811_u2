@@ -34,8 +34,10 @@ Route::get('r1', function() {
 });
 
 //修改 Route 接受參數
-Route::get('hello/{name}',function($name){
-    return'Hello,'.$name;
-});
+//Route::get('hello/{name}', function ($name){
+//修改參數成選擇性
+Route::get('hello/{name?}', function ($name = 'Everybody'){
+    return 'Hello, '.$name;
+})->name('hello.index');//將 Route 取名為 hello.index
 
 
