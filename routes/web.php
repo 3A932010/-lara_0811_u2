@@ -40,4 +40,7 @@ Route::get('hello/{name?}', function ($name = 'Everybody'){
     return 'Hello, '.$name;
 })->name('hello.index');//將 Route 取名為 hello.index
 
-
+//3.增加新的 Route
+Route::get('test', function (){
+    return 'test';
+});
