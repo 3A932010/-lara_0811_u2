@@ -12,7 +12,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*
 //設定Route回應view
 Route::get('/', function () {
     return view('welcome');
+});
+*/
+
+//設定 Route 回傳字串
+Route::get('/', function () {
+    return 'welcome';
 });
