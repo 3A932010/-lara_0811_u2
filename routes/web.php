@@ -34,6 +34,7 @@ Route::get('r1', function() {
     return redirect('r2');
 });
 
+
 //修改 Route 接受參數
 //Route::get('hello/{name}', function ($name){
 //修改參數成選擇性
@@ -41,14 +42,12 @@ Route::get('hello/{name?}', function ($name = 'Everybody'){
     return 'Hello, '.$name;
 })->name('hello.index');//將 Route 取名為 hello.index
 
+
 //3.增加新的 Route
 Route::get('test', function (){
     return 'test';
 });
 
-Route::get('hello/{name?}', function ($name = 'Everybody'){
-    return 'Hello, '.$name;
-})->name('hello.index');
 
 //5-1.設定 dashboard 路徑的 Route
 Route::get('dashboard', function (){
